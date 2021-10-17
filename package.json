@@ -1,0 +1,50 @@
+{
+  "name": "react-ts-vite",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Leandro Coelho",
+    "url": "https://github.com/Leandrocoelho1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-jest": "^25.0.1",
+    "eslint-plugin-jest-dom": "^3.9.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.1-alpha-930c9e7ee-20211015",
+    "eslint-plugin-testing-library": "^4.0.0-alpha.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.7"
+  }
+}

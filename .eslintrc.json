@@ -1,0 +1,69 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser", // Allows Eslint to understand TypeScript syntax.
+  "parserOptions": {
+    "ecmaVersion": 2021, // ECMAScript version supported in the project.
+    "sourceType": "module", // set to `module` because we ue ECMAScript modules.
+    "ecmaFeatures": {
+      "jsx": true // enable jsx for React.
+    }
+  },
+  "extends": [
+    "eslint:recommended", // Eslint recommended configuration by eslint.
+    "plugin:react/recommended", // Recommended react linting configs.
+    "plugin:react-hooks/recommended", // Recommended react hooks linting configs.
+    "plugin:jsx-a11y/recommended", // Turns on a11y rules for JSX.
+    "plugin:@typescript-eslint/recommended", // Turns on rules from TypeScript-specific plugin.
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "es6": true, // enable ES2015 features.
+    "browser": true, // enable use of global browser variables like `windows`.
+    "node": true // enable use of global node variables like `process`.
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // auto-detect React version from package.json.
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/__tests__/**/*.[jt]s?(x)",
+        "src/**/?(*.)+(spec|test).[jt]s?(x)"
+      ], // Override config for same files pattern as jest `testMatch` default value
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:jest-dom/recommended"
+      ],
+      "plugins": ["jest", "jest-dom"],
+      "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "jest-dom/prefer-checked": "error",
+        "jest-dom/prefer-enabled-disabled": "error",
+        "jest-dom/prefer-required": "error",
+        "jest-dom/prefer-to-have-attribute": "error"
+      },
+      "env": {
+        "jest/globals": true // enable Jest global variables.
+      }
+    }
+  ]
+}
